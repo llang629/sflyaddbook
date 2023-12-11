@@ -9,3 +9,6 @@
 
 # ignore virtual environment
 /venv
+
+# ignore PowerPoint file used to generate .png image
+sfly_config.pptx

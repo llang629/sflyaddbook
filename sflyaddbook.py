@@ -105,7 +105,7 @@ if __name__ == '__main__':
         prog=__file__.rsplit('/', maxsplit=1)[-1],
         description='Download Shutterfly address book and save as .csv file.',
         epilog=
-        'Instructions for Shutterfly credentials in example configuration .ini file.')
+        'Instructions for Shutterfly credentials in example config .ini file.')
     parser.add_argument('-c',
                         '--config',
                         metavar='CONFIG_FILE',
