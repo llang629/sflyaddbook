@@ -1,5 +1,5 @@
 # sflyaddbook
-Export a user's Shutterfly [address book](https://www.shutterfly.com/addressbook/management.sfly#/contacts).
+Export a Shutterfly user's [address book](https://www.shutterfly.com/addressbook/management.sfly#/contacts).
 ## Purpose
 The Shutterfly address book supports imports from .csv files, but not exports. How to overcome this limitation?
 
