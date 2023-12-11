@@ -41,6 +41,7 @@ Tested with multiple Shutterfly user accounts, up to about 200 contacts, mostly 
 Performs as expected in December 2023. As with all reverse engineering, undocumented API changes and unexpected behavior may occur without notice.
 ## Feedback
 Feedback welcome about instructions, bugs, or feature requests,
-via the [Issues](https://github.com/llang629/sflyaddbook/issues) tab.\
+via the [Issues](https://github.com/llang629/sflyaddbook/issues) tab.
+
 ---
 Copyright &copy;2023 Larry Lang
