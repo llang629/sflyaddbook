@@ -1,0 +1,11 @@
+# only include example config file
+*.ini
+!sflyaddbook.ini
+
+# ignore output files
+*.csv
+*.xlsx
+*.pdf
+
+# ignore virtual environment
+/venv
