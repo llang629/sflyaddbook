@@ -47,7 +47,9 @@ def load_config(config_file):
         headers_bearer = 'Bearer ' + headers_bearer
     try:
         columns_sorting_order = config['Columns']['sorting_order'].split('\n')
-        columns_sorting_order = [line for line in columns_sorting_order if line.strip() != '']
+        columns_sorting_order = [
+            line for line in columns_sorting_order if line.strip() != ''
+        ]
     except KeyError:
         columns_sorting_order = None
     return url_userid, headers_bearer, columns_sorting_order
@@ -136,8 +138,8 @@ if __name__ == '__main__':
         print("Entries don't match address book:", rows, len(address_book))
     if output_column_sorting_order:
         if columns != len(output_column_sorting_order):
-            print("Non-empty columns ({}) don't match sorting index ({}):".format(
-                columns, len(output_column_sorting_order)))
+            print("Non-empty columns ({}) don't match sorting index ({}):".
+                  format(columns, len(output_column_sorting_order)))
             width = max(len(x) for x in df.columns)
             print("{0:>{width}} {1}".format("Shutter dfly column",
                                             "Sorting index",
