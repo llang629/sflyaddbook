@@ -125,10 +125,21 @@ if __name__ == '__main__':
     username = get_sfly('uid', userid, bearer)['fullName']
     print("Requesting address book for {}.".format(username))
     address_book = get_sfly('contacts', userid, bearer)['items']
-    full_address = pandas.json_normalize(address_book, record_path='addresses')
-    everything_else = pandas.json_normalize(address_book).drop(['addresses'],
-                                                               axis='columns')
-    df = pandas.concat([full_address, everything_else], axis='columns')
+    full_address = pandas.json_normalize(
+        address_book,
+        record_path='addresses',
+        meta=['id', 'firstName', 'lastName'],
+    )
+    everything_else = (
+        pandas.json_normalize(address_book)
+        .drop(['addresses'], axis='columns')
+    )
+    df = full_address.merge(
+        everything_else,
+        on='id',
+        how='left',
+        suffixes=('', '_person')
+    )
     df.replace([''], [None], inplace=True)
     df.dropna(how='all', axis='columns', inplace=True)
     rows, columns = df.shape
